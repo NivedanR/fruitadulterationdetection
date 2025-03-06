@@ -1,0 +1,328 @@
+ARM Linker, 5.02 [Build 28] [MDK-ARM Professional]
+
+==============================================================================
+
+Section Cross References
+
+    lpc2300.o(RESET) refers to sbl_main.o(.text) for sbl_main
+    board_init.o(.text) refers to timer.o(.text) for Timer_init
+    sbl_main.o(.text) refers to board_init.o(.text) for board_init
+    sbl_main.o(.text) refers to comms.o(.text) for init_comms
+    sbl_main.o(.text) refers to isp_iap.o(.text) for isp_cmd_loop
+    comms.o(.text) refers to emac.o(.text) for init_emac
+    isp_iap.o(.text) refers to aeabi_sdiv.o(.text_udiv) for __aeabi_uidivmod
+    isp_iap.o(.text) refers to comms.o(.text) for getline
+    isp_iap.o(.text) refers to isp_iap.o(.bss) for .bss
+    isp_iap.o(.text) refers to isp_iap.o(.constdata) for .constdata
+    isp_iap.o(.text) refers to isp_iap.o(.data) for .data
+    isp_iap.o(.text) refers to timer.o(.text) for Timer_DeInit
+    isp_iap.o(.text) refers to isp_iap.o(i.__ARM_common_call_via_r0) for __ARM_common_call_via_r0
+    isp_iap.o(.text) refers to isp_iap.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    isp_iap.o(.text) refers to sbl_main.o(.constdata) for fcclk_KHz
+    isp_iap.o(.text) refers to sbl_main.o(.ARM.__at_0x1FC) for crp
+    emac.o(.text) refers to timer.o(.text) for Timer_GetTimestamp
+    emac.o(.text) refers to rt_memcpy.o(.text) for __aeabi_memcpy
+    emac.o(.text) refers to emac.o(.data) for .data
+    emac.o(.text) refers to emac.o(.bss) for .bss
+    emac.o(.text) refers to isp_iap.o(.text) for str_cmp
+    emac.o(.text) refers to emac.o(.constdata) for .constdata
+    rt_memcpy.o(.text) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    aeabi_sdiv.o(.text_udiv) refers to aeabi_sdiv.o(.text) for __arm_div2
+    aeabi_sdiv_div0.o(.text_udiv) refers to aeabi_sdiv_div0.o(.text) for __arm_div2
+    aeabi_idiv0_sigfpe.o(.text) refers to isp_iap.o(.text) for __rt_div0
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing isp_iap.o(.constdata), (4 bytes).
+
+1 unused section(s) (total 4 bytes) removed from the image.
+
+==============================================================================
+
+Adding Veneers to the image
+
+    Adding TA veneer (4 bytes, Inline) for call to '__aeabi_uidivmod' from isp_iap.o(.text).
+    Adding TA veneer (4 bytes, Inline) for call to '__aeabi_memcpy' from emac.o(.text).
+    Adding TA veneer (4 bytes, Inline) for call to '__ARM_common_switch8' from isp_iap.o(.text).
+
+3 Veneer(s) (total 12 bytes) added to the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      180  lpc2300.o(RESET)
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0_sigfpe.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv_div0.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv.o ABSOLUTE
+    ../clib/divrt.s                          0x00000000   Number         0  divrt_7tdmi_div0.o ABSOLUTE
+    ../clib/divrt.s                          0x00000000   Number         0  divrt_7tdmi.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy.o ABSOLUTE
+    Debug\uart.c                             0x00000000   Number         0  uart.o ABSOLUTE
+    board_init\board_init.c                  0x00000000   Number         0  board_init.o ABSOLUTE
+    comms.c                                  0x00000000   Number         0  comms.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    ethernet\emac.c                          0x00000000   Number         0  emac.o ABSOLUTE
+    isp\isp_iap.c                            0x00000000   Number         0  isp_iap.o ABSOLUTE
+    sbl_main.c                               0x00000000   Number         0  sbl_main.o ABSOLUTE
+    startup\LPC2300.s                        0x00000000   Number         0  lpc2300.o ABSOLUTE
+    timer\timer.c                            0x00000000   Number         0  timer.o ABSOLUTE
+    Undef_Handler                            0x00000040   ARM Code       4  lpc2300.o(RESET)
+    SWI_Handler                              0x00000044   ARM Code       4  lpc2300.o(RESET)
+    PAbt_Handler                             0x00000048   ARM Code       4  lpc2300.o(RESET)
+    DAbt_Handler                             0x0000004c   ARM Code       4  lpc2300.o(RESET)
+    IRQ_Handler                              0x00000050   ARM Code       4  lpc2300.o(RESET)
+    FIQ_Handler                              0x00000054   ARM Code       4  lpc2300.o(RESET)
+    .text                                    0x000000b4   Section        0  board_init.o(.text)
+    .text                                    0x00000178   Section        0  sbl_main.o(.text)
+    .text                                    0x000001a2   Section        0  comms.o(.text)
+    .text_udiv                               0x000001cc   Section       36  aeabi_sdiv.o(.text_udiv)
+    i.__ARM_common_call_via_r0               0x000001f0   Section        0  isp_iap.o(i.__ARM_common_call_via_r0)
+    .constdata                               0x000001f4   Section        4  sbl_main.o(.constdata)
+    .ARM.__at_0x1FC                          0x000001fc   Section        4  sbl_main.o(.ARM.__at_0x1FC)
+    .text                                    0x00000200   Section        0  isp_iap.o(.text)
+    .text                                    0x00000c38   Section        0  emac.o(.text)
+    .text                                    0x00001228   Section        0  timer.o(.text)
+    .text                                    0x000012a4   Section      212  rt_memcpy.o(.text)
+    .text                                    0x00001378   Section      384  aeabi_sdiv.o(.text)
+    __arm_div8                               0x000013a4   ARM Code       0  aeabi_sdiv.o(.text)
+    __arm_div5                               0x000013c8   ARM Code       0  aeabi_sdiv.o(.text)
+    __arm_div2                               0x000013ec   ARM Code       0  aeabi_sdiv.o(.text)
+    __arm_div_large                          0x00001428   ARM Code       0  aeabi_sdiv.o(.text)
+    .text                                    0x000014f8   Section      100  rt_memcpy_w.o(.text)
+    i.__ARM_common_switch8                   0x00001560   Section        0  isp_iap.o(i.__ARM_common_switch8)
+    .constdata                               0x00001578   Section       23  isp_iap.o(.constdata)
+    .constdata                               0x0000158f   Section       16  emac.o(.constdata)
+    .data                                    0x40000040   Section        8  isp_iap.o(.data)
+    .data                                    0x40000048   Section       32  emac.o(.data)
+    rxptr                                    0x40000050   Data           4  emac.o(.data)
+    txptr                                    0x40000054   Data           4  emac.o(.data)
+    .bss                                     0x40000068   Section      208  isp_iap.o(.bss)
+    .bss                                     0x40000138   Section      240  emac.o(.bss)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv1$ARM_ISAv4$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    Reset_Handler                            0x00000058   ARM Code       0  lpc2300.o(RESET)
+    init_PLL                                 0x000000b5   Thumb Code   116  board_init.o(.text)
+    init_MAM                                 0x00000129   Thumb Code    18  board_init.o(.text)
+    init_PCB                                 0x0000013b   Thumb Code    18  board_init.o(.text)
+    VectorsRemap                             0x0000014d   Thumb Code     2  board_init.o(.text)
+    board_init                               0x0000014f   Thumb Code    30  board_init.o(.text)
+    enter_isp                                0x00000179   Thumb Code    18  sbl_main.o(.text)
+    sbl_main                                 0x0000018b   Thumb Code    24  sbl_main.o(.text)
+    init_comms                               0x000001a3   Thumb Code    12  comms.o(.text)
+    getline                                  0x000001af   Thumb Code     8  comms.o(.text)
+    sendline_crlf                            0x000001b7   Thumb Code     8  comms.o(.text)
+    comm_handshake                           0x000001bf   Thumb Code     8  comms.o(.text)
+    Inline Thumb to ARM Veneer to __aeabi_uidivmod 0x000001c9   Thumb Code     4  aeabi_sdiv.o(.text_udiv)
+    __aeabi_uidiv                            0x000001cc   ARM Code       0  aeabi_sdiv.o(.text_udiv)
+    __aeabi_uidivmod                         0x000001cc   ARM Code      36  aeabi_sdiv.o(.text_udiv)
+    __ARM_common_call_via_r0                 0x000001f1   Thumb Code     2  isp_iap.o(i.__ARM_common_call_via_r0)
+    fcclk_KHz                                0x000001f4   Data           4  sbl_main.o(.constdata)
+    crp                                      0x000001fc   Data           4  sbl_main.o(.ARM.__at_0x1FC)
+    is_div                                   0x00000201   Thumb Code    10  isp_iap.o(.text)
+    __rt_div0                                0x0000020b   Thumb Code     2  isp_iap.o(.text)
+    str_cmp                                  0x0000020d   Thumb Code    38  isp_iap.o(.text)
+    a_to_i                                   0x00000233   Thumb Code    44  isp_iap.o(.text)
+    i_to_a                                   0x0000025f   Thumb Code    58  isp_iap.o(.text)
+    run_isp                                  0x00000299   Thumb Code    42  isp_iap.o(.text)
+    param_check                              0x000002c3   Thumb Code   154  isp_iap.o(.text)
+    iap_entry                                0x0000035d   Thumb Code     4  isp_iap.o(.text)
+    decode                                   0x00000361   Thumb Code    16  isp_iap.o(.text)
+    uudecode                                 0x00000371   Thumb Code   190  isp_iap.o(.text)
+    encode                                   0x0000042f   Thumb Code    16  isp_iap.o(.text)
+    uuencode                                 0x0000043f   Thumb Code   124  isp_iap.o(.text)
+    write_to_ram                             0x000004bb   Thumb Code   236  isp_iap.o(.text)
+    read                                     0x000005a7   Thumb Code   184  isp_iap.o(.text)
+    go_cmd                                   0x0000065f   Thumb Code   120  isp_iap.o(.text)
+    unlock                                   0x000006d7   Thumb Code    52  isp_iap.o(.text)
+    prepare_sector                           0x0000070b   Thumb Code    78  isp_iap.o(.text)
+    copy                                     0x00000759   Thumb Code   156  isp_iap.o(.text)
+    erase                                    0x000007f5   Thumb Code   178  isp_iap.o(.text)
+    blank_check                              0x000008a7   Thumb Code   140  isp_iap.o(.text)
+    compare_mem                              0x00000933   Thumb Code   118  isp_iap.o(.text)
+    tokenize                                 0x000009a9   Thumb Code   108  isp_iap.o(.text)
+    enable_interrupts                        0x00000a15   Thumb Code     6  isp_iap.o(.text)
+    disable_interrupts                       0x00000a1b   Thumb Code     6  isp_iap.o(.text)
+    execute_user_code                        0x00000a21   Thumb Code     6  isp_iap.o(.text)
+    user_code_present                        0x00000a27   Thumb Code    42  isp_iap.o(.text)
+    check_isp_entry_pin                      0x00000a51   Thumb Code    16  isp_iap.o(.text)
+    exec_isp_cmd                             0x00000a61   Thumb Code   248  isp_iap.o(.text)
+    isp_cmd_loop                             0x00000b59   Thumb Code   198  isp_iap.o(.text)
+    write_PHY                                0x00000c39   Thumb Code    32  emac.o(.text)
+    read_PHY                                 0x00000c59   Thumb Code    42  emac.o(.text)
+    ReadFrame_EMAC                           0x00000c83   Thumb Code    12  emac.o(.text)
+    CopyFromFrame_EMAC                       0x00000c8f   Thumb Code    42  emac.o(.text)
+    same_mac                                 0x00000cb9   Thumb Code    28  emac.o(.text)
+    filter_pass                              0x00000cd5   Thumb Code    54  emac.o(.text)
+    WriteFrame_EMAC                          0x00000d0b   Thumb Code    12  emac.o(.text)
+    CopyToFrame_EMAC                         0x00000d17   Thumb Code    30  emac.o(.text)
+    chksum16                                 0x00000d35   Thumb Code    52  emac.o(.text)
+    init_emac                                0x00000d69   Thumb Code   500  emac.o(.text)
+    emac_getline                             0x00000f5d   Thumb Code   346  emac.o(.text)
+    emac_sendline_crlf                       0x000010b7   Thumb Code   232  emac.o(.text)
+    emac_handshake                           0x0000119f   Thumb Code   110  emac.o(.text)
+    Timer_init                               0x00001229   Thumb Code    22  timer.o(.text)
+    Timer_DeInit                             0x0000123f   Thumb Code    22  timer.o(.text)
+    Timer_GetTimestamp                       0x00001255   Thumb Code     8  timer.o(.text)
+    Timer_HasTimestampExpired                0x0000125d   Thumb Code    36  timer.o(.text)
+    Timer_Delay                              0x00001281   Thumb Code    24  timer.o(.text)
+    Inline Thumb to ARM Veneer to __aeabi_memcpy 0x000012a1   Thumb Code     4  rt_memcpy.o(.text)
+    __aeabi_memcpy                           0x000012a4   ARM Code       0  rt_memcpy.o(.text)
+    __rt_memcpy                              0x000012a4   ARM Code     212  rt_memcpy.o(.text)
+    _memcpy_lastbytes                        0x00001358   ARM Code       0  rt_memcpy.o(.text)
+    __aeabi_idiv                             0x00001378   ARM Code       0  aeabi_sdiv.o(.text)
+    __aeabi_idivmod                          0x00001378   ARM Code     384  aeabi_sdiv.o(.text)
+    __aeabi_memcpy4                          0x000014f8   ARM Code       0  rt_memcpy_w.o(.text)
+    __aeabi_memcpy8                          0x000014f8   ARM Code       0  rt_memcpy_w.o(.text)
+    __rt_memcpy_w                            0x000014f8   ARM Code     100  rt_memcpy_w.o(.text)
+    _memcpy_lastbytes_aligned                0x00001544   ARM Code       0  rt_memcpy_w.o(.text)
+    Inline Thumb to ARM Veneer to __ARM_common_switch8 0x0000155d   Thumb Code     4  isp_iap.o(i.__ARM_common_switch8)
+    __ARM_common_switch8                     0x00001560   ARM Code      24  isp_iap.o(i.__ARM_common_switch8)
+    ok                                       0x00001578   Data           3  isp_iap.o(.constdata)
+    resend                                   0x0000157b   Data           7  isp_iap.o(.constdata)
+    sync_str                                 0x00001582   Data          13  isp_iap.o(.constdata)
+    Ok                                       0x0000158f   Data           3  emac.o(.constdata)
+    sync                                     0x00001592   Data          13  emac.o(.constdata)
+    lock                                     0x40000040   Data           4  isp_iap.o(.data)
+    crp_after_reset                          0x40000044   Data           4  isp_iap.o(.data)
+    synchro                                  0x40000048   Data           1  emac.o(.data)
+    data_size                                0x4000004a   Data           2  emac.o(.data)
+    DestPort                                 0x4000004c   Data           2  emac.o(.data)
+    SrcPort                                  0x4000004e   Data           2  emac.o(.data)
+    ethernet_timeout                         0x40000058   Data           4  emac.o(.data)
+    MyMAC                                    0x4000005c   Data           6  emac.o(.data)
+    HostMAC                                  0x40000062   Data           6  emac.o(.data)
+    cmd_buf                                  0x40000068   Data          70  isp_iap.o(.bss)
+    param0                                   0x400000ae   Data          15  isp_iap.o(.bss)
+    param1                                   0x400000bd   Data          15  isp_iap.o(.bss)
+    param2                                   0x400000cc   Data          15  isp_iap.o(.bss)
+    param3                                   0x400000db   Data          15  isp_iap.o(.bss)
+    param4                                   0x400000ea   Data          15  isp_iap.o(.bss)
+    param_buf                                0x400000fc   Data          20  isp_iap.o(.bss)
+    param_table                              0x40000110   Data          20  isp_iap.o(.bss)
+    result_table                             0x40000124   Data          20  isp_iap.o(.bss)
+    rxbuffer                                 0x40000138   Data         120  emac.o(.bss)
+    txbuffer                                 0x400001b0   Data         120  emac.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000000
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000015c8, Max: 0x00020000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x000015a0, Max: 0x00020000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x000000b4   Code   RO            1  * RESET               lpc2300.o
+    0x000000b4   0x000000c4   Code   RO            6    .text               board_init.o
+    0x00000178   0x0000002a   Code   RO           29    .text               sbl_main.o
+    0x000001a2   0x00000024   Code   RO           58    .text               comms.o
+    0x000001c6   0x00000002   PAD
+    0x000001c8   0x00000004   Ven    RO          184    .text_udiv          c_t.l(aeabi_sdiv.o)
+    0x000001cc   0x00000024   Code   RO          184    .text_udiv          c_t.l(aeabi_sdiv.o)
+    0x000001f0   0x00000002   Code   RO           94    i.__ARM_common_call_via_r0  isp_iap.o
+    0x000001f2   0x00000002   PAD
+    0x000001f4   0x00000004   Data   RO           31    .constdata          sbl_main.o
+    0x000001f8   0x00000004   PAD
+    0x000001fc   0x00000004   Data   RO           30    .ARM.__at_0x1FC     sbl_main.o
+    0x00000200   0x00000a38   Code   RO           77    .text               isp_iap.o
+    0x00000c38   0x000005f0   Code   RO          110    .text               emac.o
+    0x00001228   0x00000078   Code   RO          163    .text               timer.o
+    0x000012a0   0x00000004   Ven    RO          181    .text               c_t.l(rt_memcpy.o)
+    0x000012a4   0x000000d4   Code   RO          181    .text               c_t.l(rt_memcpy.o)
+    0x00001378   0x00000180   Code   RO          183    .text               c_t.l(aeabi_sdiv.o)
+    0x000014f8   0x00000064   Code   RO          203    .text               c_t.l(rt_memcpy_w.o)
+    0x0000155c   0x00000004   Ven    RO           92    i.__ARM_common_switch8  isp_iap.o
+    0x00001560   0x00000018   Code   RO           92    i.__ARM_common_switch8  isp_iap.o
+    0x00001578   0x00000017   Data   RO           80    .constdata          isp_iap.o
+    0x0000158f   0x00000010   Data   RO          112    .constdata          emac.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x40000040, Size: 0x000001e8, Max: 0x00001fc0, ABSOLUTE, UNINIT)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x40000040   0x00000008   Data   RW           81    .data               isp_iap.o
+    0x40000048   0x00000020   Data   RW          113    .data               emac.o
+    0x40000068   0x000000d0   Zero   RW           78    .bss                isp_iap.o
+    0x40000138   0x000000f0   Zero   RW          111    .bss                emac.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       196         12          0          0          0       3047   board_init.o
+        36          0          0          0          0        890   comms.o
+      1520        132         16         32        240       6331   emac.o
+      2642        116         23          8        208       9467   isp_iap.o
+       180         40          0          0          0        304   lpc2300.o
+        42          0          8          0          0       1127   sbl_main.o
+       120          8          0          0          0       1533   timer.o
+
+    ----------------------------------------------------------------------
+      4744        308         52         40        448      22699   Object Totals
+         4          0          0          0          0          0   (incl. Generated)
+         4          0          5          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+       424          0          0          0          0        148   aeabi_sdiv.o
+       216          0          0          0          0         68   rt_memcpy.o
+       100          0          0          0          0         80   rt_memcpy_w.o
+
+    ----------------------------------------------------------------------
+       740          0          0          0          0        296   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       740          0          0          0          0        296   c_t.l
+
+    ----------------------------------------------------------------------
+       740          0          0          0          0        296   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      5484        308         52         40        448      22267   Grand Totals
+      5484        308         52         40        448      22267   ELF Image Totals
+      5484        308         52         40          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 5536 (   5.41kB)
+    Total RW  Size (RW Data + ZI Data)               488 (   0.48kB)
+    Total ROM Size (Code + RO Data + RW Data)       5576 (   5.45kB)
+
+==============================================================================
+

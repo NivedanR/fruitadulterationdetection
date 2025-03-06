@@ -1,0 +1,24 @@
+FLASH MAGIC LICENSE
+EMBEDDED SYSTEMS ACADEMY, INC.
+
+You should carefully read the following terms and conditions before using this software.  Unless you have a different license agreement signed by Embedded Systems Academy, Inc. ("ESA") your use, distribution, or installation of this copy of Flash Magic indicates your acceptance of this license.
+
+If you do not agree to any of the terms of this License, then do not install, distribute or use this copy of Flash Magic.
+
+This license grants you the following rights: 
+
+Installation and Use. You may install and use an unlimited number of copies of Flash Magic. Flash Magic is provided free as a DEVELOPMENT TOOL ONLY. It is NOT LICENSED FOR PRODUCTION, TESTING OR IN FIELD USE. Contact ESA for additional options if non-development uses are required.
+
+Reproduction and Distribution. You may not reproduce and distribute copies of Flash Magic without written permission of ESA.
+
+All title and copyrights in and to Flash Magic (including but not limited to any images, photographs, animations, video, audio, music, text, and "applets" incorporated into Flash Magic), any accompanying printed materials, and any copies of Flash Magic are owned by ESA. Flash Magic is protected by copyright laws and international treaty provisions. Therefore, you must treat Flash Magic like any other copyrighted material. 
+
+THIS SOFTWARE, AND ALL ACCOMPANYING FILES, DATA AND MATERIALS, ARE DISTRIBUTED "AS IS" AND WITH NO WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED. Good data processing procedure dictates that any program be thoroughly tested with non-critical data before relying on it. The user must assume the entire risk of using the program.  THIS DISCLAIMER OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THE AGREEMENT.
+
+IN NO EVENT SHALL ESA, OR ITS PRINCIPALS, SHAREHOLDERS, OFFICERS, EMPLOYEES, AFFILIATES, CONTRACTORS, SUBSIDIARIES, OR PARENT ORGANIZATIONS, BE LIABLE FOR ANY INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES WHATSOEVER RELATING TO THE USE OF FLASH MAGIC, OR YOUR RELATIONSHIP WITH ESA.
+
+IN ADDITION, IN NO EVENT DOES ESA AUTHORIZE YOU TO USE FLASH MAGIC IN APPLICATIONS OR SYSTEMS WHERE FLASH MAGIC'S FAILURE TO PERFORM CAN REASONABLY BE EXPECTED TO RESULT IN A SIGNIFICANT PHYSICAL INJURY, OR IN LOSS OF LIFE.  ANY SUCH USE BY YOU IS ENTIRELY AT YOUR OWN RISK, AND YOU AGREE TO HOLD ESA HARMLESS FROM ANY CLAIMS OR LOSSES RELATING TO SUCH UNAUTHORIZED USE.
+
+This Agreement is the complete statement of the Agreement between the parties on the subject matter, and merges and supersedes all other or prior understandings, purchase orders, agreements and arrangements.  This Agreement shall be governed by the laws of the State of California.  Exclusive jurisdiction and venue for all matters relating to this Agreement shall be in courts and fora located in the State of California, and you consent to such jurisdiction and venue.
+
+All rights of any kind in Flash Magic which are not expressly granted in this License are entirely and exclusively reserved to and by ESA. You may not rent, lease, sell, modify, translate, reverse engineer, decompile, disassemble or create derivative works based on Flash Magic.
